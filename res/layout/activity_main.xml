@@ -4,25 +4,74 @@
     android:layout_height="match_parent"
     tools:context="com.example.you_wi.Main" >
 
-    <TextView
-        android:id="@+id/tvWiki"
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout
+        xmlns:sothree="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/sliding_layout"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="@drawable/custom_background"
-        android:paddingLeft="6dp"
-        android:paddingRight="6dp"
-        android:scrollbars="vertical"
-        android:text=""
-        android:textColor="#fff" />
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        sothree:dragView="@+id/dragView" >
 
-    <ListView
-        android:id="@+id/lvYou"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/tvWiki"
-        android:layout_below="@+id/tvWiki"
-        android:layout_marginTop="2dp"
-        android:background="@drawable/custom_background1" >
-    </ListView>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/wikipediatext"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/wikipediaheading"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="Wikipedia Content"
+                android:textColor="#ffffff"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/tvWiki"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="25dp"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:paddingTop="100dp"
+                android:scrollbars="vertical"
+                android:textColor="#0c0b0b"
+                android:textSize="15sp" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/dragView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/youtubetext"
+            android:clickable="true"
+            android:focusable="false"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/youtubeheading" >
+
+                <TextView
+                    android:id="@+id/tvSlide"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="Youtube Content"
+                    android:textColor="#ffffff"
+                    android:textSize="28sp" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/lvYou"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="25dp"
+                android:textColor="#0c0b0b" >
+            </ListView>
+        </LinearLayout>
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
 
 </RelativeLayout>

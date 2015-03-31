@@ -6,20 +6,17 @@
 
     <EditText
         android:id="@+id/etGet"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"        
         android:layout_centerHorizontal="true"
         android:layout_marginTop="37dp"
-        android:ems="10" />
+        android:hint="Enter text" />
 
     <Button
-        android:id="@+id/bSubmit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/etGet"
+        android:id="@+id/bSubmit"        
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"        
         android:layout_below="@+id/etGet"
-        android:layout_marginLeft="59dp"
         android:text="Submit" />
 
 </RelativeLayout>

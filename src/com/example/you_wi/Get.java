@@ -152,7 +152,7 @@ public class Get extends Activity {
 
 				YouTube.Search.List search = youtube.search()
 						.list("id,snippet");
-				String apiKey = "AIzaSyAMYURG_meBDF81wPiUX16LW0vbgcl08-s";
+				String apiKey = "AIzaSyDa5KRp7AlbXUVDiPNdPEbqNdYklErWn90";
 				search.setKey(apiKey);
 				search.setQ(params[0]);
 				search.setType("video");

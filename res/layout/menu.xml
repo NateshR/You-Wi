@@ -6,21 +6,17 @@
 
     <Button
         android:id="@+id/bInput"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="63dp"
-        android:layout_marginTop="32dp"
+        android:layout_centerVertical="true"        
         android:text="Input" />
 
     <Button
         android:id="@+id/bScan"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/bInput"
         android:layout_below="@+id/bInput"
-        android:layout_marginTop="46dp"
+        android:layout_centerVertical="true"
         android:text="Scan" />
 
 </RelativeLayout>
